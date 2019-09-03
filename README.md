@@ -10,4 +10,6 @@ Run it with:
 npx wiremock
 ```
 
+It only relies on dependencies found in an NPM package repository. It is created with [JDeploy](https://github.com/shannah/jdeploy) and will download and use a JRE, [node-jre](https://www.npmjs.com/package/node-jre), if one is not available.
+
 See: http://wiremock.org/docs/running-standalone/

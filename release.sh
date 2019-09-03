@@ -7,6 +7,6 @@ wget https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-jre8-standal
 rm -rf package.json
 cp package.json.orig package.json
 sed -i "s/VERSION/$version/g" package.json
-sudo jdeploy publish
-git tag $version
-git push --tags
+sudo jdeploy publish \
+ && git tag $version \
+ && git push --tags
