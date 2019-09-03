@@ -9,7 +9,7 @@
   "repository": "git@github.com:tomasbjerre/wiremock-npm.git",
   "main": "index.js",
   "preferGlobal": true,
-  "version": "VERSION-0",
+  "version": "VERSION",
   "jdeploy": {"jar": "wiremock-jre8-standalone-VERSION.jar"},
   "dependencies": {"shelljs": "^0.7.5"},
   "license": "Apache 2",

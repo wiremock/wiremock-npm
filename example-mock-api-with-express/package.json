@@ -1,0 +1,20 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "format": "prettier --write *",
+    "serve-wiremock": "npx wiremock --root-dir ./wiremock --port 8081",
+    "serve-frontend": "node run-frontend.js",
+    "serve-express": "node express-example.js",
+    "serve": "concurrently 'npm run serve-wiremock' 'npm run serve-frontend' 'npm run serve-express'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "prettier": "^1.18.2",
+    "request": "^2.88.0"
+  }
+}
