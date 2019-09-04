@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "format": "prettier --write *",
-    "serve-wiremock": "npx wiremock --root-dir ./wiremock --port 8081",
+    "serve-wiremock": "wiremock --root-dir ./wiremock --port 8081",
     "serve-frontend": "node run-frontend.js",
     "serve-express": "node express-example.js",
     "serve": "concurrently 'npm run serve-wiremock' 'npm run serve-frontend' 'npm run serve-express'"
@@ -15,6 +15,7 @@
     "concurrently": "^4.1.2",
     "express": "^4.17.1",
     "prettier": "^1.18.2",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "wiremock": "^2.24.0"
   }
 }

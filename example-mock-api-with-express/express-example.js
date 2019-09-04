@@ -15,13 +15,14 @@ const use = (path, uriBase) => {
       case "del":
       case "put":
         const json = req.body;
+        const uri = uriBase + req.baseUrl;
         r = request[method]({
-          uri: uriBase + req.baseUrl,
+          uri: uri,
           qs: req.query,
           json: json
         });
         console.log(
-          req.path + " -> " + method + ": " + r.uri + " " + (json ? json : "")
+          req.baseUrl + " -> " + method + ": " + uri + " " + (json ? json : "")
         );
         break;
       default:

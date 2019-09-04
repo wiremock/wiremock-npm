@@ -1,0 +1,9 @@
+For issues on Wiremock you should go to:
+
+ https://github.com/tomakehurst/wiremock/issues
+
+And the documentation at:
+
+ http://wiremock.org/docs/running-standalone/
+
+This is just a wrapper around that tool!
