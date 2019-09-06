@@ -7,7 +7,7 @@ wget –q https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standal
 rm -rf package.json
 cp package.json.orig package.json
 sed -i "s/VERSION/$version/g" package.json
-npm install -g jdeploy
-jdeploy publish \
+#npm install -g jdeploy
+sudo jdeploy publish \
  && git tag $version \
  && git push --tags
