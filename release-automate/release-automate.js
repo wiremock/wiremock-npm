@@ -50,8 +50,8 @@ const options = {
 };
 
 request(options, function (error, response, body) {
-  console.error('error:', error);
-  console.log('statusCode:', response && response.statusCode);
-  console.log('body:', body);
+  //console.error('error:', error);
+  //console.log('statusCode:', response && response.statusCode);
+  //console.log('body:', body);
   handleBody(JSON.parse(body))
 });
