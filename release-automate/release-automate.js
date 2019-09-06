@@ -45,13 +45,18 @@ function handleBody(body) {
 const options = {
   url: "https://api.github.com/repos/tomakehurst/wiremock/tags",
   headers: {
-    "User-Agent": "Awesome-Octocat-App"
+    "User-Agent": "Awesome-Octocat-App",
+    "Authorization": "token " + process.env.GH_TOKEN
   }
 };
 
 request(options, function (error, response, body) {
-  //console.error('error:', error);
-  //console.log('statusCode:', response && response.statusCode);
-  //console.log('body:', body);
-  handleBody(JSON.parse(body))
+  try {
+    handleBody(JSON.parse(body))
+  } catch (e) {
+    console.error('error:', error);
+    console.log('statusCode:', response && response.statusCode);
+    console.log('body:', body);
+    process.exit(1)
+  }
 });

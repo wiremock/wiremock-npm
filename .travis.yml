@@ -6,4 +6,4 @@ before_install:
 script:
   - "./release-automate.sh"
 notifications:
-  email: false
+  email: true
