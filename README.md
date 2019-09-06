@@ -1,7 +1,6 @@
 # Wiremock NPM
 
 [![NPM](https://img.shields.io/npm/v/wiremock.svg?style=flat-square) ](https://www.npmjs.com/package/wiremock)
-[![Build Status](https://travis-ci.org/tomasbjerre/wiremock-npm.svg?branch=master)](https://travis-ci.org/tomasbjerre/wiremock-npm)
 
 This is [Wiremock Standalone](http://wiremock.org/docs/running-standalone/) wrapped inside an NPM package. It relies only on dependencies found in NPM. It is created with [JDeploy](https://github.com/shannah/jdeploy) and will use the existing JRE if found, or download one with [node-jre](https://www.npmjs.com/package/node-jre).
 
