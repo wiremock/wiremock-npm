@@ -10,4 +10,4 @@ sed -i "s/VERSION/$version/g" package.json
 npm install -g jdeploy
 jdeploy publish \
  && git tag $version \
- && git push --tags
+ && git push -u origin --tags

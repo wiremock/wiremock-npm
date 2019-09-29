@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+git remote remove origin
+git remote add origin https://$GH_TOKEN@github.com/tomasbjerre/wiremock-npm.git
+git remote -v
+
+git tag testtag
+git push -u origin --tags
+
+
+
 cd release-automate
 npm install
 versionToRelease=`node release-automate.js`
@@ -17,6 +27,4 @@ git commit -a -m "Bump version to $versionToRelease"
 
 ./release.sh || exit 1
 
-git remote add origin-token https://$GH_TOKEN@github.com/tomasbjerre/wiremock-npm.git
-git remote -v
-git push -u origin-token master
+git push -u origin master
