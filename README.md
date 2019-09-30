@@ -19,9 +19,8 @@ npx wiremock
 
 This example is in the repo in [`example-mock-api-with-express`](/example-mock-api-with-express).
 
-It starts a server with [ExpressJS](https://www.npmjs.com/package/expressjs) and delegates to a frontend and an API. Like this:
+It starts a server with [ExpressJS](https://www.npmjs.com/package/expressjs) and delegates to a frontend and an API. When running `npm run serve` it will start this setup:
 
-When running `npm run serve` it will start this setup:
 ```
 http://localhost:8080/
   |
