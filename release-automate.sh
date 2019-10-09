@@ -19,7 +19,9 @@ echo "version = $versionToRelease" > version.properties
 git config user.email "travis@travis-ci.org"
 git config user.name "Travis CI"
 git checkout master
+
+./release.sh || exit 1
+
 git commit -a -m "Bump version to $versionToRelease"
 git push -u origin master
 
-./release.sh || exit 1
