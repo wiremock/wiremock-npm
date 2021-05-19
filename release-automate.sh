@@ -8,7 +8,7 @@ git remote -v
 
 cd release-automate
 npm install
-versionToRelease=`node release-automate.js`
+versionToRelease=2.28.1
 if [ $? -eq 1 ]; then
  echo "No new release"
  exit
