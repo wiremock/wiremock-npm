@@ -10,7 +10,7 @@
   "main": "index.js",
   "preferGlobal": true,
   "version": "VERSION",
-  "jdeploy": {"jar": "wiremock-standalone-2.27.2.jar"},
+  "jdeploy": {"jar": "wiremock-standalone-VERSION.jar"},
   "dependencies": {"shelljs": "^0.7.5"},
   "license": "Apache 2",
   "name": "wiremock",
