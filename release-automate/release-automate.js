@@ -10,15 +10,21 @@ function handleBody(body) {
 
   let latestTag = "0.0.0";
   versions.forEach(candidate => {
-    let candidateParts = candidate.split(".");
-    let latestParts = latestTag.split(".");
-    if (candidateParts.length == 3) {
-      if (parseInt(latestParts[0]) <= parseInt(candidateParts[0])) {
-        if (parseInt(latestParts[1]) <= parseInt(candidateParts[1])) {
-          //console.log(latestParts[1] + " <= " + parseInt(candidateParts[1]));
-          if (parseInt(latestParts[2]) <= parseInt(candidateParts[2])) {
-            //console.log("latest ", latest, " becomes ", candidate);
-            latestTag = candidate;
+    if (/^[0-9\.]+$/.test(candidate)) {
+      let candidateParts = candidate.split(".");
+      let latestParts = latestTag.split(".");
+      //console.log(latestParts)
+      //console.log(candidateParts)
+      if (candidateParts.length == 3) {
+        if (parseInt(latestParts[0]) <= parseInt(candidateParts[0])) {
+          //console.log(latestParts[0] + " <= " + parseInt(candidateParts[0]));
+          if (parseInt(latestParts[1]) <= parseInt(candidateParts[1])) {
+            //console.log(latestParts[1] + " <= " + parseInt(candidateParts[1]));
+            if (parseInt(latestParts[2]) <= parseInt(candidateParts[2])) {
+              //console.log(latestParts[2] + " <= " + parseInt(candidateParts[2]));
+              //console.log("latest ", latestTag, " becomes ", candidate);
+              latestTag = candidate;
+            }
           }
         }
       }
