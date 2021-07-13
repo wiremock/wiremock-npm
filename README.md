@@ -90,7 +90,7 @@ Option                                  Description
                                           "password" if not specified.          
                                           (default: jar:file:/home/bjerre/.     
                                           npm/_npx/2949/lib/node_modules/wiremock/jdeploy-
-                                          bundle/wiremock-standalone-2.27.2.jar!
+                                          bundle/wiremock-jre8-standalone-2.29.0.jar!
                                           /keystore)                            
 --https-port <String>                   If this option is present WireMock will 
                                           enable HTTPS on the specified port    
