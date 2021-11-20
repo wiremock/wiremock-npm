@@ -1,5 +1,7 @@
 {
-  "bin": {"wiremock": "jdeploy-bundle/jdeploy.js"},
+  "name": "wiremock",
+  "version": "VERSION",
+  "preferGlobal": true,
   "author": "Tomas Bjerre",
   "description": "Wiremock Standalone wrapped in an NPM package so that it can be run with 'npx wiremock'.",
   "keywords": [
@@ -7,13 +9,11 @@
   ],
   "homepage": "https://github.com/tomasbjerre/wiremock-npm",
   "repository": "git@github.com:tomasbjerre/wiremock-npm.git",
-  "main": "index.js",
-  "preferGlobal": true,
-  "version": "VERSION",
-  "jdeploy": {"jar": "wiremock-jre8-standalone-VERSION.jar"},
-  "dependencies": {"shelljs": "^0.7.5"},
+  "runnable-jar-regexp": ".*wiremock-jre8-standalone-\\d+\\.\\d+\\.\\d+\\.jar",
+  "files": ["wiremock-jre8-standalone-*"],
+  "bin": "./index.js",
+  "dependencies": {
+    "npm-java-runner": "0.0.14"
+  },
   "license": "Apache 2",
-  "name": "wiremock",
-  "files": ["jdeploy-bundle"],
-  "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}
 }

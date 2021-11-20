@@ -8,7 +8,7 @@ ls -hs wiremock-jre8-standalone-$version.jar || (echo "does not exist" && exit 1
 rm -rf package.json
 cp package.json.orig package.json
 sed -i "s/VERSION/$version/g" package.json
-npm install -g jdeploy
-jdeploy publish \
+npm install \
+ && npm publish \
  && git tag $version \
  && git push -u origin --tags

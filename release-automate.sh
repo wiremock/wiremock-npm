@@ -16,8 +16,8 @@ fi
 cd ..
 echo "version = $versionToRelease" > version.properties
 
-git config user.email "travis@travis-ci.org"
-git config user.name "Travis CI"
+git config user.email "tomas.bjerre85@gmail.com"
+git config user.name "Tomas Bjerre"
 git checkout master
 
 ./release.sh || exit 1
