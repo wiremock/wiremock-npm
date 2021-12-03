@@ -86,10 +86,6 @@ Option                                  Description
 --https-keystore <String>               Path to an alternative keystore for
                                           HTTPS. Password is assumed to be
                                           "password" if not specified.
-                                          (default: jar:file:/home/bjerre/.
-                                          npm/_npx/2949/lib/node_modules/wiremock/jdeploy-
-                                          bundle/wiremock-jre8-standalone-2.29.0.jar!
-                                          /keystore)
 --https-port <String>                   If this option is present WireMock will
                                           enable HTTPS on the specified port
 --https-require-client-cert             Make the server require a trusted
