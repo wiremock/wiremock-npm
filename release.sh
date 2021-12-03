@@ -10,7 +10,7 @@ rm -rf build \
  && ls -hs build/wiremock*.jar || (echo "does not exist" && exit 1)
 
 #npm version prerelease --preid=alpha
-
+rm -f package-lock.json
 npm install \
  && npm publish \
  && git tag $version \

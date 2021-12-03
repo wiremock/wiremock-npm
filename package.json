@@ -8,5 +8,8 @@
   "bin": "./index.js",
   "dependencies": {
     "npm-java-runner": "^0.0.17"
-  }
+  },
+  "license": "Apache 2",
+  "homepage": "https://github.com/tomasbjerre/wiremock-npm",
+  "repository": "git@github.com:tomasbjerre/wiremock-npm.git"
 }

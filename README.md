@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/v/wiremock.svg?style=flat-square) ](https://www.npmjs.com/package/wiremock)
 
-This is [Wiremock Standalone](http://wiremock.org/docs/running-standalone/) wrapped inside an NPM package. It relies only on dependencies found in NPM.
+This is [Wiremock Standalone](http://wiremock.org/docs/running-standalone/) wrapped [inside an NPM package](https://github.com/tomasbjerre/npm-java-runner). It relies only on dependencies found in NPM.
 
 See: http://wiremock.org/docs/running-standalone/
 
