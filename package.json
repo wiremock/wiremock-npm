@@ -1,0 +1,12 @@
+{
+  "version": "2.32.0",
+  "name": "wiremock",
+  "runnable-jar-regexp": "build/.*.jar",
+  "files": [
+    "build"
+  ],
+  "bin": "./index.js",
+  "dependencies": {
+    "npm-java-runner": "^0.0.17"
+  }
+}
