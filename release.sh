@@ -14,4 +14,6 @@ rm -f package-lock.json
 npm install \
  && npm publish \
  && git tag $version \
- && git push -u origin --tags
+ && git push -u origin --tags \
+ && git commit -a -m "releasing $version" \
+ && git push
