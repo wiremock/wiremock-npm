@@ -5,9 +5,14 @@ echo releasing $version
 
 rm -rf build \
  && mkdir build \
- && wget –q https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-jre8-standalone/$version/wiremock-jre8-standalone-$version.jar \
-    -P build \
- && ls -hs build/wiremock*.jar || (echo "does not exist" && exit 1)
+ && wget –q https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-jre8-standalone/$version/wiremock-jre8-standalone-$version.jar -P build
+
+FILE=build/wiremock-jre8-standalone-$version.jar
+if [ -f "$FILE" ]; then
+ echo JAR downloaded ok
+else 
+ echo JAR not downloaded ok
+fi
 
 #npm version prerelease --preid=alpha
 rm -f package-lock.json
