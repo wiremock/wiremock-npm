@@ -10,8 +10,9 @@ rm -rf build \
 FILE=build/wiremock-jre8-standalone-$version.jar
 if [ -f "$FILE" ]; then
  echo JAR downloaded ok
-else 
+else
  echo JAR not downloaded ok
+ exit
 fi
 
 #npm version prerelease --preid=alpha
