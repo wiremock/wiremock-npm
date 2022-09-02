@@ -7,7 +7,7 @@
   ],
   "bin": "./index.js",
   "dependencies": {
-    "npm-java-runner": "^0.0.17"
+    "npm-java-runner": "^1.0.2"
   },
   "license": "Apache 2",
   "homepage": "https://github.com/tomasbjerre/wiremock-npm",
