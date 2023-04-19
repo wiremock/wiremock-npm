@@ -1,0 +1,29 @@
+name: Release package
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          registry-url: https://registry.npmjs.org/
+          node-version: '14'
+
+      - name: Git configuration
+        run: |
+          git config --global user.email "tomas.bjerre85@gmail.com"
+          git config --global user.name "Tomas Bjerre (GitHub Action)"
+
+      - name: Publish
+        run: ./release.sh
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

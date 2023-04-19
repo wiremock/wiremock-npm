@@ -16,10 +16,10 @@ else
 fi
 
 #npm version prerelease --preid=alpha
-rm -f package-lock.json
+rm -f package-lock.json || echo No package-lock.json
 npm install \
  && npm publish \
- && git commit -a -m "releasing $version" \
+ && git commit --allow-empty -a -m "releasing $version" \
  && git tag $version \
  && git push -u origin --tags \
  && git push
