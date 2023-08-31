@@ -5,7 +5,7 @@ echo releasing $version
 
 rm -rf build \
  && mkdir build \
- && wget –q https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-jre8-standalone/$version/wiremock-jre8-standalone-$version.jar -P build
+ && wget –q https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standalone/$version/wiremock-standalone-$version.jar -P build
 
 FILE=build/wiremock-jre8-standalone-$version.jar
 if [ -f "$FILE" ]; then
