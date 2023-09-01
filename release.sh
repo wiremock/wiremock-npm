@@ -7,7 +7,7 @@ rm -rf build \
  && mkdir build \
  && wget –q https://repo1.maven.org/maven2/org/wiremock/wiremock-standalone/$version/wiremock-standalone-$version.jar -P build
 
-FILE=build/wiremock-jre8-standalone-$version.jar
+FILE=build/wiremock-standalone-$version.jar
 if [ -f "$FILE" ]; then
  echo JAR downloaded ok
 else
