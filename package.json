@@ -1,5 +1,5 @@
 {
-  "version": "3.12.1",
+  "version": "3.13.0",
   "name": "wiremock",
   "runnable-jar-regexp": "build/.*.jar",
   "files": [
